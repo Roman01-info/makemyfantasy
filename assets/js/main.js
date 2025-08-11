@@ -172,9 +172,9 @@ function initScrollAnimations() {
 // Navbar scroll effect
 function initNavbarScroll() {
   const navbar = document.querySelector(".main-header");
-  let lastScrollY = window.scrollY;
+  let ticking = false;
 
-  window.addEventListener("scroll", () => {
+  function updateNavbar() {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > 100) {
@@ -183,15 +183,27 @@ function initNavbarScroll() {
       navbar.classList.remove("scrolled");
     }
 
-    // Hide/show navbar on scroll
-    if (currentScrollY > lastScrollY && currentScrollY > 200) {
-      navbar.style.transform = "translateY(-100%)";
-    } else {
-      navbar.style.transform = "translateY(0)";
-    }
+    // Keep navbar always visible and properly positioned
+    navbar.style.transform = "translateY(0)";
+    navbar.style.position = "fixed";
+    navbar.style.top = "60px";
+    navbar.style.left = "0";
+    navbar.style.right = "0";
+    navbar.style.width = "100%";
+    navbar.style.zIndex = "999";
 
-    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(updateNavbar);
+      ticking = true;
+    }
   });
+
+  // Initialize navbar position immediately
+  updateNavbar();
 }
 
 // Modal functions (will be expanded in modals.js)

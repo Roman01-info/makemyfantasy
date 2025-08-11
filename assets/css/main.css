@@ -240,10 +240,11 @@ p {
   background: var(--dark-surface);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
-  position: fixed;
+  position: fixed !important; /* Ensure it stays fixed */
   top: 60px; /* Position below sticky signup bar */
   left: 0;
   right: 0;
+  width: 100%;
   z-index: 999;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -335,6 +336,16 @@ p {
   background: var(--text-primary);
   margin: 3px 0;
   transition: var(--transition-fast);
+}
+
+/* Ensure navbar always stays fixed - override any conflicting styles */
+.main-header {
+  position: fixed !important;
+  top: 60px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 999 !important;
 }
 
 /* Hero Section */
