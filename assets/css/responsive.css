@@ -310,7 +310,73 @@
 
   .creator-card {
     max-width: 400px;
+    min-width: 320px; /* Ensure minimum width for consistency */
+    width: 100%; /* Full width within container */
     margin: 0 auto;
+    height: auto; /* Allow natural height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  /* Ensure consistent image dimensions */
+  .creator-image {
+    height: 220px; /* Fixed height for mobile */
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .creator-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+
+  /* Consistent info section */
+  .creator-info {
+    padding: var(--spacing-lg);
+    min-height: 200px; /* Ensure consistent info section height */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Take remaining space */
+  }
+
+  /* Consistent creator name */
+  .creator-name {
+    font-size: 1.1rem;
+    height: 2.5rem; /* Fixed height for name */
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Consistent stats section */
+  .creator-stats {
+    margin-bottom: var(--spacing-md);
+    height: 3rem; /* Fixed height for stats */
+    display: flex;
+    align-items: center;
+  }
+
+  /* Consistent tags section */
+  .creator-tags {
+    margin-bottom: var(--spacing-md);
+    min-height: 2rem; /* Minimum height for tags */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  /* Consistent action buttons */
+  .creator-actions {
+    margin-top: auto; /* Push to bottom */
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .creator-actions .btn {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
   }
 
   .creator-stats {
@@ -458,12 +524,37 @@
     font-size: 1rem;
   }
 
+  /* Enhanced creator cards for small mobile */
+  .creator-card {
+    min-width: 280px; /* Smaller minimum for small screens */
+    max-width: 350px; /* Adjusted max width */
+  }
+
   .creator-image {
-    height: 180px;
+    height: 180px; /* Slightly smaller for small screens */
   }
 
   .creator-info {
     padding: var(--spacing-md);
+    min-height: 180px; /* Adjusted for small screens */
+  }
+
+  .creator-name {
+    font-size: 1rem;
+    height: 2rem; /* Adjusted for small screens */
+  }
+
+  .creator-stats {
+    height: 2.5rem; /* Adjusted for small screens */
+  }
+
+  .creator-tags {
+    min-height: 1.5rem; /* Adjusted for small screens */
+  }
+
+  .creator-actions .btn {
+    font-size: 0.8rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 
   .trust-item {
