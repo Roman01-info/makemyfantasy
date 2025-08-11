@@ -200,10 +200,10 @@ function initNavbarScroll() {
     navbar.style.transform = "translateY(0)";
     navbar.style.position = "fixed";
 
-    // Check if mobile view (screen width <= 768px)
+    // Responsive positioning logic
     const isMobile = window.innerWidth <= 768;
     if (isMobile) {
-      navbar.style.top = "70px"; // Position after enhanced mobile sticky bar
+      navbar.style.top = "70px"; // Mobile positioning
     } else {
       navbar.style.top = "48px"; // Desktop positioning
     }

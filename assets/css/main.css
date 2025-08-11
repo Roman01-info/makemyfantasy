@@ -356,6 +356,20 @@ p {
   border-top: none !important;
 }
 
+/* Mobile navbar positioning */
+@media (max-width: 768px) {
+  .main-header {
+    top: 70px !important; /* After enhanced sticky bar */
+  }
+}
+
+/* Small mobile positioning */
+@media (max-width: 480px) {
+  .main-header {
+    top: 60px !important; /* After compact sticky bar */
+  }
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
