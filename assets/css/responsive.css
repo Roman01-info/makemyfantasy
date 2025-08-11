@@ -59,6 +59,8 @@
       var(--secondary-color)
     );
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+    /* border: 5px solid red; */
+    display: inline-block;
   }
 
   .signup-content {
@@ -66,13 +68,14 @@
     gap: var(--spacing-md);
     text-align: center;
     padding: 0 var(--spacing-sm);
+    /* border: 3px solid green; */
   }
 
   .signup-text {
     font-size: 0.9rem;
     font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+    /* border: 2px solid blue; */
   }
 
   .signup-buttons {
@@ -80,6 +83,8 @@
     gap: var(--spacing-md); /* Increased gap for better spacing */
     flex-wrap: nowrap; /* Keep buttons side by side */
     flex-direction: row; /* Ensure horizontal layout */
+    width: 100%;
+    /* border: 2px solid blue; */
   }
 
   .signup-buttons .btn {
@@ -91,9 +96,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     flex: 1; /* Equal width distribution */
-    max-width: 155px; /* Adjusted max width */
+    max-width: 255px; /* Adjusted max width */
     text-align: center; /* Ensure text is centered */
     white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide any overflow */
+    width: 250px;
+    display: inline-block;
   }
 
   .signup-buttons .btn:active {
