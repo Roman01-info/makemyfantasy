@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make My Fantasy - Premium Adult Entertainment Platform</title>
+    <meta
+      name="description"
+      content="Join Make My Fantasy - Connect with premium creators and exclusive content. Safe, secure, and discreet platform for adults."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sticky Signup Bar -->
+    <div id="sticky-signup-bar" class="sticky-signup-bar">
+      <div class="container">
+        <div class="signup-content">
+          <span class="signup-text"
+            >Ready to start earning? Join thousands of creators making money
+            today!</span
+          >
+          <div class="signup-buttons">
+            <button
+              class="btn btn-creator"
+              onclick="openSignupModal('creator')"
+            >
+              <i class="fas fa-star"></i> Become a Creator
+            </button>
+            <button class="btn btn-fan" onclick="openSignupModal('fan')">
+              <i class="fas fa-heart"></i> Join as Fan
+            </button>
+          </div>
+        </div>
+        <button class="close-sticky-bar" onclick="closeStickyBar()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-brand">
+            <a href="#" class="logo">
+              <!-- <i class="fas fa-heart"></i> -->
+              <img
+                src="./assets/images/MakemyfantasyFinal-1.png"
+                style="width: 200px; height: auto"
+                alt="Makemyfantasy"
+                srcset=""
+              />
+            </a>
+          </div>
+
+          <div class="nav-menu" id="nav-menu">
+            <ul class="nav-list">
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#creators" class="nav-link">Creators</a></li>
+              <li><a href="#categories" class="nav-link">Categories</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-actions">
+            <button class="btn btn-outline" onclick="openLoginModal()">
+              Login
+            </button>
+            <button class="btn btn-primary" onclick="openSignupModal()">
+              Sign Up
+            </button>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Make Your <span class="highlight">Fantasy</span> Reality
+          </h1>
+          <p class="hero-subtitle">
+            Connect with premium creators and discover exclusive content on the
+            most trusted adult entertainment platform
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">50K+</span>
+              <span class="stat-label">Active Creators</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2M+</span>
+              <span class="stat-label">Happy Members</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">$10M+</span>
+              <span class="stat-label">Paid to Creators</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <button
+              class="btn btn-primary btn-large"
+              onclick="openSignupModal('fan')"
+            >
+              <i class="fas fa-play"></i> Start Exploring
+            </button>
+            <button
+              class="btn btn-secondary btn-large"
+              onclick="openSignupModal('creator')"
+            >
+              <i class="fas fa-dollar-sign"></i> Start Earning
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof-section">
+      <div class="container">
+        <div class="social-proof-content">
+          <h2>Join the Success Stories</h2>
+          <div class="proof-stats">
+            <div class="proof-item">
+              <i class="fas fa-trophy"></i>
+              <span class="proof-text"
+                >Top earner made <strong>$250K</strong> this month</span
+              >
+            </div>
+            <div class="proof-item">
+              <i class="fas fa-users"></i>
+              <span class="proof-text"
+                >Over <strong>1,500</strong> creators joined this week</span
+              >
+            </div>
+            <div class="proof-item">
+              <i class="fas fa-shield-alt"></i>
+              <span class="proof-text"
+                ><strong>100% secure</strong> payments guaranteed</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Creators Section -->
+    <section id="creators" class="featured-creators-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Creators</h2>
+          <p class="section-subtitle">
+            Discover amazing creators and exclusive content
+          </p>
+          <div class="creator-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="new">New</button>
+            <button class="filter-btn" data-filter="trending">Trending</button>
+            <button class="filter-btn" data-filter="top">Top Rated</button>
+          </div>
+        </div>
+
+        <div class="creators-grid" id="creators-grid">
+          <!-- Creator cards will be dynamically loaded here -->
+        </div>
+
+        <div class="section-cta">
+          <button
+            class="btn btn-outline btn-large"
+            onclick="loadMoreCreators()"
+          >
+            Load More Creators
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Indicators Section -->
+    <section class="trust-section">
+      <div class="container">
+        <h2 class="section-title">Why Choose Make My Fantasy?</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Bank-Level Security</h3>
+            <p>
+              Your data and payments are protected with 256-bit SSL encryption
+              and advanced security measures.
+            </p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3>Privacy Protected</h3>
+            <p>
+              Complete anonymity and discretion. Your privacy is our top
+              priority with secure browsing.
+            </p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h3>Secure Payments</h3>
+            <p>
+              Multiple payment options with instant payouts for creators and
+              secure billing for fans.
+            </p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>
+              Round-the-clock customer support to help you with any questions or
+              concerns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secondary CTA Section -->
+    <section class="secondary-cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Subscribe to Your Favorite Creators?</h2>
+          <p>
+            Get instant access to exclusive content and connect with amazing
+            creators worldwide
+          </p>
+          <button
+            class="btn btn-primary btn-large"
+            onclick="openSignupModal('fan')"
+          >
+            <i class="fas fa-heart"></i> Start Your Journey
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-brand">
+              <a href="#" class="logo">
+                <i class="fas fa-heart"></i>
+                <span>Make My Fantasy</span>
+              </a>
+              <p>
+                The premier platform for adult entertainment and creator
+                monetization.
+              </p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>For Creators</h4>
+            <ul>
+              <li><a href="#">Start Earning</a></li>
+              <li><a href="#">Creator Resources</a></li>
+              <li><a href="#">Payout Information</a></li>
+              <li><a href="#">Creator Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>For Fans</h4>
+            <ul>
+              <li><a href="#">Browse Creators</a></li>
+              <li><a href="#">Subscription Plans</a></li>
+              <li><a href="#">Payment Methods</a></li>
+              <li><a href="#">Fan Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Make My Fantasy. All rights reserved. | 18+ Only</p>
+          <div class="payment-icons">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-bitcoin"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals will be added here -->
+    <div id="modal-container"></div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/modals.js"></script>
+    <script src="assets/js/creators.js"></script>
+  </body>
+</html>
