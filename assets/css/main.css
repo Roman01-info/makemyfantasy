@@ -60,7 +60,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 140px; /* Account for sticky bar (60px) + navbar (80px) */
+  padding-top: 128px; /* Sticky bar (48px) + navbar (80px) */
 }
 
 /* Container */
@@ -200,7 +200,9 @@ p {
   color: var(--text-primary);
   z-index: 1001;
   padding: var(--spacing-sm) 0;
-  box-shadow: var(--shadow-md);
+  box-shadow: none; /* Remove shadow to eliminate gap */
+  margin-bottom: 0; /* Ensure no margin */
+  border-bottom: none; /* Remove any border */
   /* Always visible - no transform needed */
 }
 
@@ -241,12 +243,14 @@ p {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   position: fixed !important; /* Ensure it stays fixed */
-  top: 60px; /* Position below sticky signup bar */
+  top: 48px; /* Sticky bar height: 16px content + 16px padding + 16px for text */
   left: 0;
   right: 0;
   width: 100%;
   z-index: 999;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 0; /* Ensure no margin */
+  border-top: none; /* Remove any top border */
 }
 
 .navbar {
@@ -341,11 +345,13 @@ p {
 /* Ensure navbar always stays fixed - override any conflicting styles */
 .main-header {
   position: fixed !important;
-  top: 60px !important;
+  top: 48px !important; /* Match the exact sticky bar height */
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
   z-index: 999 !important;
+  margin-top: 0 !important;
+  border-top: none !important;
 }
 
 /* Hero Section */

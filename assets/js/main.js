@@ -31,8 +31,13 @@ function showStickyBar() {
 
 function closeStickyBar() {
   const stickyBar = document.getElementById("sticky-signup-bar");
+  const navbar = document.querySelector(".main-header");
   if (stickyBar) {
     stickyBar.style.display = "none";
+    // Adjust navbar position when sticky bar is hidden
+    if (navbar) {
+      navbar.style.top = "0px";
+    }
     // Adjust body padding when sticky bar is hidden
     document.body.style.paddingTop = "80px"; // Just navbar height
   }
@@ -40,10 +45,15 @@ function closeStickyBar() {
 
 function showStickyBarAgain() {
   const stickyBar = document.getElementById("sticky-signup-bar");
+  const navbar = document.querySelector(".main-header");
   if (stickyBar) {
     stickyBar.style.display = "block";
+    // Restore navbar position when sticky bar is shown
+    if (navbar) {
+      navbar.style.top = "48px";
+    }
     // Restore body padding when sticky bar is shown
-    document.body.style.paddingTop = "140px"; // Sticky bar + navbar height
+    document.body.style.paddingTop = "128px"; // Sticky bar (48px) + navbar (80px)
   }
 }
 
@@ -186,11 +196,13 @@ function initNavbarScroll() {
     // Keep navbar always visible and properly positioned
     navbar.style.transform = "translateY(0)";
     navbar.style.position = "fixed";
-    navbar.style.top = "60px";
+    navbar.style.top = "48px"; // Match sticky bar height exactly
     navbar.style.left = "0";
     navbar.style.right = "0";
     navbar.style.width = "100%";
     navbar.style.zIndex = "999";
+    navbar.style.marginTop = "0";
+    navbar.style.borderTop = "none";
 
     ticking = false;
   }

@@ -68,16 +68,16 @@
 
   /* Adjust body padding for mobile */
   body {
-    padding-top: 120px; /* Reduced for mobile */
+    padding-top: 108px; /* Sticky bar (48px) + navbar (60px for mobile) */
   }
 
   /* Navigation */
   .nav-menu {
     position: fixed;
-    top: 120px; /* Below sticky bar and navbar */
+    top: 108px; /* Below sticky bar and navbar */
     left: -100%;
     width: 100%;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 108px);
     background: var(--dark-surface);
     flex-direction: column;
     justify-content: center;
