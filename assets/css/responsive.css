@@ -107,6 +107,7 @@
     backdrop-filter: blur(15px); /* Enhanced blur effect */
     border-bottom: 2px solid var(--primary-color); /* Colored border for visibility */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+    top: 70px !important; /* Position after enhanced sticky bar (70px height) */
   }
 
   .nav-brand .logo {
@@ -378,6 +379,7 @@
   /* Enhanced navbar for small screens */
   .main-header {
     padding: var(--spacing-sm) 0;
+    top: 60px !important; /* Position after compact sticky bar on small screens */
   }
 
   .nav-brand .logo {
@@ -404,6 +406,11 @@
   }
 
   /* Enhanced mobile menu */
+  .nav-menu {
+    top: 120px; /* Adjust for small screen positioning */
+    height: calc(100vh - 120px);
+  }
+
   .nav-link {
     font-size: 1.2rem;
     padding: var(--spacing-md);

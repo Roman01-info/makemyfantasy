@@ -39,7 +39,8 @@ function closeStickyBar() {
       navbar.style.top = "0px";
     }
     // Adjust body padding when sticky bar is hidden
-    document.body.style.paddingTop = "80px"; // Just navbar height
+    const isMobile = window.innerWidth <= 768;
+    document.body.style.paddingTop = isMobile ? "70px" : "80px"; // Just navbar height
   }
 }
 
@@ -50,10 +51,12 @@ function showStickyBarAgain() {
     stickyBar.style.display = "block";
     // Restore navbar position when sticky bar is shown
     if (navbar) {
-      navbar.style.top = "48px";
+      const isMobile = window.innerWidth <= 768;
+      navbar.style.top = isMobile ? "70px" : "48px";
     }
     // Restore body padding when sticky bar is shown
-    document.body.style.paddingTop = "128px"; // Sticky bar (48px) + navbar (80px)
+    const isMobile = window.innerWidth <= 768;
+    document.body.style.paddingTop = isMobile ? "140px" : "128px"; // Sticky bar + navbar
   }
 }
 
@@ -196,7 +199,15 @@ function initNavbarScroll() {
     // Keep navbar always visible and properly positioned
     navbar.style.transform = "translateY(0)";
     navbar.style.position = "fixed";
-    navbar.style.top = "48px"; // Match sticky bar height exactly
+
+    // Check if mobile view (screen width <= 768px)
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      navbar.style.top = "70px"; // Position after enhanced mobile sticky bar
+    } else {
+      navbar.style.top = "48px"; // Desktop positioning
+    }
+
     navbar.style.left = "0";
     navbar.style.right = "0";
     navbar.style.width = "100%";
@@ -216,6 +227,11 @@ function initNavbarScroll() {
 
   // Initialize navbar position immediately
   updateNavbar();
+
+  // Handle window resize for responsive positioning
+  window.addEventListener("resize", () => {
+    updateNavbar();
+  });
 }
 
 // Modal functions (will be expanded in modals.js)
