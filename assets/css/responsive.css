@@ -77,21 +77,23 @@
 
   .signup-buttons {
     justify-content: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md); /* Increased gap for better spacing */
     flex-wrap: nowrap; /* Keep buttons side by side */
     flex-direction: row; /* Ensure horizontal layout */
   }
 
   .signup-buttons .btn {
     font-size: 0.85rem;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    min-width: 130px; /* Slightly smaller for better fit */
+    padding: var(--spacing-sm) var(--spacing-md); /* Adjusted padding for better fit */
+    min-width: 125px; /* Slightly smaller to accommodate gap */
     font-weight: 600;
     border-radius: var(--radius-lg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     flex: 1; /* Equal width distribution */
-    max-width: 160px; /* Prevent buttons from getting too wide */
+    max-width: 155px; /* Adjusted max width */
+    text-align: center; /* Ensure text is centered */
+    white-space: nowrap; /* Prevent text wrapping */
   }
 
   .signup-buttons .btn:active {
@@ -368,17 +370,21 @@
 
   .signup-buttons {
     flex-direction: row; /* Keep buttons side by side */
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm); /* Increased gap for small mobile */
     justify-content: center;
     flex-wrap: nowrap; /* Prevent wrapping to next line */
   }
 
   .signup-buttons .btn {
     font-size: 0.8rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    min-width: 110px; /* Slightly smaller to fit side by side */
+    padding: var(--spacing-sm) var(--spacing-sm); /* Adjusted padding */
+    min-width: 105px; /* Slightly smaller to accommodate gap */
     flex: 1; /* Equal width distribution */
-    max-width: 150px; /* Prevent buttons from getting too wide */
+    max-width: 145px; /* Adjusted max width */
+    text-align: center; /* Ensure text is centered */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
   }
 
   /* Enhanced navbar for small screens */
