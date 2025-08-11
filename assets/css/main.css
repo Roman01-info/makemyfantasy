@@ -211,6 +211,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-lg);
+  min-height: 40px; /* Ensure consistent height */
 }
 
 .signup-text {
