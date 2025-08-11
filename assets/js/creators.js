@@ -74,6 +74,66 @@ const sampleCreators = [
     categories: ["trending", "top"],
     preview: "Gothic fashion and alternative style",
   },
+  {
+    id: 7,
+    name: "Scarlett Rose",
+    displayName: "ScarlettRose",
+    image: "./assets/images/8.jpg",
+    subscribers: "16.2K",
+    posts: "287",
+    rating: "4.8",
+    tags: ["Glamour", "Fashion", "Luxury"],
+    categories: ["top", "trending"],
+    preview: "Luxury lifestyle and glamour content",
+  },
+  {
+    id: 8,
+    name: "Violet Storm",
+    displayName: "VioletStorm",
+    image: "./assets/images/9.jpg",
+    subscribers: "7.9K",
+    posts: "134",
+    rating: "4.7",
+    tags: ["Artistic", "Creative", "Unique"],
+    categories: ["new", "trending"],
+    preview: "Artistic and creative expressions",
+  },
+  {
+    id: 9,
+    name: "Amber Gold",
+    displayName: "AmberGold",
+    image: "./assets/images/10.jpg",
+    subscribers: "14.5K",
+    posts: "256",
+    rating: "4.9",
+    tags: ["Luxury", "Elegance", "Premium"],
+    categories: ["top", "trending"],
+    preview: "Premium luxury content and elegance",
+  },
+  {
+    id: 10,
+    name: "Ruby Fire",
+    displayName: "RubyFire",
+    image: "./assets/images/1.jpg",
+    subscribers: "10.3K",
+    posts: "198",
+    rating: "4.8",
+    tags: ["Passionate", "Bold", "Confident"],
+    categories: ["new", "top"],
+    preview: "Bold and passionate content",
+  },
+  {
+    id: 11,
+    name: "Crystal Blue",
+    displayName: "CrystalBlue",
+    image: "./assets/images/2.jpg",
+    subscribers: "12.7K",
+    posts: "223",
+    rating: "4.8",
+    tags: ["Serene", "Natural", "Peaceful"],
+    categories: ["trending", "new"],
+    preview: "Serene and natural beauty content",
+  },
 ];
 
 // Initialize creators immediately when script loads
@@ -85,7 +145,7 @@ const sampleCreators = [
     if (creatorsGrid) {
       if (creatorsGrid.children.length === 0) {
         console.log("Loading initial creators...");
-        creatorsGrid.innerHTML = generateCreatorCards(6);
+        creatorsGrid.innerHTML = generateCreatorCards(12);
         console.log("Creators loaded:", creatorsGrid.children.length);
 
         // Add animate-in class to make cards visible
@@ -126,7 +186,7 @@ function loadInitialCreators() {
   const creatorsGrid = document.getElementById("creators-grid");
   if (creatorsGrid) {
     if (creatorsGrid.children.length === 0) {
-      creatorsGrid.innerHTML = generateCreatorCards(6);
+      creatorsGrid.innerHTML = generateCreatorCards(12);
       console.log(
         "Initial creators loaded via function:",
         creatorsGrid.children.length
