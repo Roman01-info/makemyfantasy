@@ -394,6 +394,11 @@
   }
 
   /* Trust section */
+  .trust-section {
+    background-attachment: scroll; /* Better performance on mobile */
+    background-position: center center;
+  }
+
   .trust-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
@@ -403,6 +408,12 @@
     padding: var(--spacing-lg);
     max-width: 350px;
     margin: 0 auto;
+    background: rgba(
+      30,
+      30,
+      30,
+      0.95
+    ); /* More opaque on mobile for readability */
   }
 
   .trust-icon {

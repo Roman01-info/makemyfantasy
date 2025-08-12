@@ -401,8 +401,7 @@ p {
     var(--dark-surface) 50%,
     var(--primary-color) 100%
   ); */
-  background: url("/assets/images/sexy-young-woman-big-breast-600nw-535151302.webp")
-    no-repeat center center;
+  background: url("/assets/images/15.gif") no-repeat center center;
   background-size: cover;
   opacity: 0.9;
 }
@@ -734,7 +733,28 @@ p {
 /* Trust Section */
 .trust-section {
   padding: var(--spacing-xxl) 0;
-  background: var(--dark-surface);
+  background: url("./assets/images/18.gif") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Add overlay for better text readability */
+.trust-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+/* Ensure content appears above overlay */
+.trust-section .container {
+  position: relative;
+  z-index: 2;
 }
 
 .trust-grid {
@@ -747,16 +767,19 @@ p {
 .trust-item {
   text-align: center;
   padding: var(--spacing-xl);
-  background: var(--dark-surface-variant);
+  background: rgba(30, 30, 30, 0.9); /* Semi-transparent background */
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(255, 23, 68, 0.3); /* Subtle primary color border */
   transition: all var(--transition-normal);
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 .trust-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
   border-color: var(--primary-color);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 48px rgba(255, 23, 68, 0.2); /* Primary color glow */
+  background: rgba(30, 30, 30, 0.95); /* Slightly more opaque on hover */
 }
 
 .trust-icon {
