@@ -733,7 +733,7 @@ p {
 /* Trust Section */
 .trust-section {
   padding: var(--spacing-xxl) 0;
-  background: url("./assets/images/18.gif") no-repeat center center;
+  background: url("../images/24.gif") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -747,7 +747,8 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+  background: rgba(0, 0, 0, 0.7);
+  /*Dark overlay for text readability */
   z-index: 1;
 }
 
