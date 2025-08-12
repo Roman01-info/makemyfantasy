@@ -131,6 +131,12 @@
     font-size: 1.5rem;
   }
 
+  /* Mobile logo image styling */
+  .nav-brand .logo img {
+    filter: brightness(0) invert(1); /* Ensure logo stays white on mobile */
+    max-height: 40px; /* Limit height for mobile */
+  }
+
   .nav-actions .btn {
     font-size: 0.8rem;
     padding: var(--spacing-xs) var(--spacing-md);
@@ -473,6 +479,12 @@
 
   .nav-brand .logo i {
     font-size: 1.3rem;
+  }
+
+  /* Small mobile logo image styling */
+  .nav-brand .logo img {
+    filter: brightness(0) invert(1); /* Ensure logo stays white */
+    max-height: 35px; /* Smaller for small mobile */
   }
 
   .nav-actions .btn {

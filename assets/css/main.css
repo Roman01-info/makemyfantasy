@@ -277,8 +277,18 @@ p {
 }
 
 .nav-brand .logo i {
-  color: var(--primary-color);
+  color: var(--text-primary);
   font-size: 1.8rem;
+}
+
+/* Logo image styling for navbar */
+.nav-brand .logo img {
+  filter: brightness(0) invert(1); /* Make logo white */
+  transition: filter var(--transition-fast);
+}
+
+.nav-brand .logo img:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 0 5px var(--primary-color));
 }
 
 .nav-menu {
@@ -840,6 +850,34 @@ p {
 
 .footer-section ul li a:hover {
   color: var(--primary-color);
+}
+
+/* Footer logo styling */
+.footer-brand .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-brand .logo i {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+}
+
+/* Footer logo image styling */
+.footer-brand .logo img {
+  filter: brightness(0) invert(1); /* Make logo white */
+  transition: filter var(--transition-fast);
+}
+
+.footer-brand .logo img:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 0 5px var(--primary-color));
 }
 
 .footer-brand p {
